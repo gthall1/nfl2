@@ -1,0 +1,29 @@
+<!--  was trying to create a form here that would take you to selected team's page,
+  with an additional link that would take you to standings (/leaderboard). Got the
+  other part built out and functioning enough, but didn't have quite enough time
+  to finish this and wanted to go ahead with something to submit.  Obviously my
+  form and submit needs finishing and functionality, but that's where I was trying
+  to go. This be landing page, form directs you to team page, then leaderboard.
+  Probably not the most functional layout either, but wanted to incorporate a
+  lot of different things we've learned thusfar.
+
+
+<html>
+  <head>
+    <title>National Football League</title>
+    <link rel="stylesheet" href="home.css" />
+  </head>
+
+  <body>
+    <h1>Teams</h1>
+    <ol>
+      <form>
+        <select>
+          <% @team_selector.each do |team| %>
+            <li><a href="<%= "/teams/#{team}" %>"><option><% team %></option></a></li>
+          <% end %>
+        </select>
+    </form>
+    </ol>
+  </body>
+</html>

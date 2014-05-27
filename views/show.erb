@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <title>National Football League</title>
+    <link rel="stylesheet" href="home.css" />
+  </head>
+
+  <body>
+    <h1> <%= params[:team] %></h1>
+    <text><%= " Record: #{@team["W"]} - #{@team["L"]}" %></text>
+    <h4>Results:</h4>
+    <% @games.each do |game| %>
+      <text><%= "Visitor:  #{game[:away_team]}: #{game[:away_score]}" %></text>
+      <text><%= "Home:  #{game[:home_team]}: #{game[:home_score]}" %></text>
+      <p> -------------------------------------------------- </p>
+    <% end %>
+    <p><%= "" %></p>
+    <p><%= "" %></p>
+  </body>
+</html>

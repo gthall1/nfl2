@@ -1,0 +1,15 @@
+<html>
+  <head>
+    <title>National Football League</title>
+    <link rel="stylesheet" href="home.css" />
+  </head>
+
+  <body>
+    <h1>Teams</h1>
+    <ol>
+      <% @rankings.each do |team, number| %>
+        <li> <a href="<%= "/teams/#{team}" %>"><%= "#{team}: #{number["W"]} - #{number["L"]} " %></a></li>
+      <% end %>
+    </ol>
+  </body>
+</html>
